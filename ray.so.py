@@ -45,7 +45,8 @@ def main():
         {
             k: v
             for k, v in args.__dict__.items()
-            if k in {"code", "lang", "background", "padding", "title", "darkmode"} and v
+            if k in {"code", "lang", "background", "padding", "title", "darkmode"}
+            and v is not None
         }
     )
     endpoint = f"https://www.ray.so/?{query}"
